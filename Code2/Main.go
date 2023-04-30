@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 	// 变量
@@ -34,4 +37,19 @@ func main() {
 	fmt.Println("d:", d)
 	fmt.Println("e:", e)
 	fmt.Println("f:", f)
+
+	var (
+		g = "picture"
+		h = "date"
+	)
+	fmt.Println("g:", g)
+	fmt.Println("h:", h)
+
+	fmt.Println("-----------------------------------------------------------------------------")
+
+	// 拓展：输出变量类型
+	var i = 130
+	var j = "Hello World"
+	fmt.Println("i的类型:", reflect.TypeOf(i))
+	fmt.Println("j的类型:", reflect.TypeOf(j))
 }
